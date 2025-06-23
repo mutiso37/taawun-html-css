@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/submit-form" method="post">
+        <label for="username">username(4-8 characters):</label>
+        <input type="text" id="username" pattern="[a-zA-Z0-9]{4,8}" 
+        title="User must be between 4 and 8 characters" required minlength="4" maxlength="8" placeholder="username">
+
+    <label for="Email">Email:</label>
+    <input type="email" id="Email" name="email" required placeholder="example@domain.com">
+
+    <label for="password">password</label>
+    <input type="password" id="password" name="password" required placeholder="password">
+    <input type="submit" value="submit">
+
+    
+    </form>
+    
+</body>
+</html>
