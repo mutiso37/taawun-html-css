@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif; /* A fallback font */
+    background-color: #f0f0f0; /* Light background for visibility */
+}
+
+.logo-container {
+    position: relative;
+    width: 300px; /* Adjust as needed */
+    /* You can set a max-width to make it responsive */
+    max-width: 90%;
+    text-align: center;
+}
+
+.logo-image {
+    width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below image */
+}
+
+/* If you choose to use overlaid text, here's some basic styling for it */
+/* .logo-text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    color: #333; 
+}
+
+.logo-text-overlay .ministries {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.logo-text-overlay .slogan {
+    font-size: 0.8em;
+    color: #666;
+} */
