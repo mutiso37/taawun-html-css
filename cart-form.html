@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Checkout Page</title>
+</head>
+<body>
+    <h1>Checkout</h1>
+
+    <section>
+        <h2>Your Cart</h2> 
+        <figure>
+            <img src="https://media.istockphoto.com/id/1373017581/photo/donkey-cart-near-swakopmund.jpg?s=1024x1024&w=is&k=20&c=7m2ZiuDXr8xFhBL9UP1GzGMl0GzrVr0LWfG6KwA8UqQ=" alt="two donkeys pulling cart" width="300" height="300">
+        </figure> 
+        <p>This is a wooden cart</p>
+    </section> 
+
+    <section>
+        <h2>Payment Information</h2> 
+        <form>
+            <label for="card-name">Card Name:</label>
+            <input type="text" id="card-name" name="card-name" required aria-required="true" placeholder="Enter your name">
+            <br><br>
+
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required aria-required="true" placeholder="Enter your card number">
+            <br><br>
+        </form> 
+    </section> 
+
+    <input type="text" aria-labelledby="search-btn">
+    <button type="button" id="search-btn">Search</button>
+
+    <button>
+        <i class="fa-solid fa-gear" aria-hidden="true"></i>
+        <span class="label">Settings</span>
+    </button>
+
+</body>
+</html>
