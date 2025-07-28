@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grace Impact Ministries - Grace in action, Lives transformed</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Grace Impact Ministries is a Spirit-led, Christ-centered ministry dedicated to preaching the Word, healing the broken, reaching the youth, and empowering lives through worship, giving, and teaching. Grace in action, lives transformed.">
+  <meta name="keywords" content="Grace Impact Ministries, Christian ministry, faith, worship, giving, healing, youth empowerment, spiritual growth, community outreach, lives transformed">
+  <meta name="author" content="Grace Impact Ministries">
+  <link rel="canonical" href="https://www.yourdomain.com/"> <!-- Replace with your actual domain -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:title" content="Grace Impact Ministries - Grace in action, Lives transformed">
+  <meta property="og:description" content="Grace Impact Ministries: Spirit-led, Christ-centered ministry empowering lives through grace, worship, giving, and teaching.">
+  <meta property="og:image" content="http://googleusercontent.com/file_content/13"> <!-- Your logo image URL -->
+  <meta property="og:url" content="https://www.yourdomain.com/"> <!-- Replace with your actual domain -->
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Grace Impact Ministries - Grace in action, Lives transformed">
+  <meta name="twitter:description" content="Grace Impact Ministries: Spirit-led, Christ-centered ministry empowering lives through grace, worship, giving, and teaching.">
+  <meta name="twitter:image" content="http://googleusercontent.com/file_content/13"> <!-- Your logo image URL -->
+  <meta name="twitter:creator" content="@YourTwitterHandle"> <!-- Replace with your Twitter handle if you have one -->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://placehold.co/32x32/3a3f58/ffffff?text=GM" type="image/x-icon">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      overflow-x: hidden; /* Prevent horizontal scroll due to potential hidden content */
+    }
+
+    header {
+      background-color: #3a3f58;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed; /* Make header sticky */
+      width: 100%;
+      top: 0;
+      z-index: 1000; /* Ensure header is on top */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Add subtle shadow */
+    }
+
+    .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 12px;
+      border-radius: 8px; /* Added rounded corners for consistency */
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    nav a:hover {
+      color: #a0dfff; /* Lighter blue on hover */
+      text-decoration: none; /* Remove underline on hover, relying on color change */
+    }
+
+    /* Main content section styling for 'tabbed' view */
+    .main-content-section {
+      display: none; /* Hidden by default */
+      min-height: calc(100vh - 80px); /* Ensure section takes full viewport height minus header */
+      padding-top: 80px; /* Account for fixed header */
+      box-sizing: border-box; /* Include padding in height calculation */
+      overflow-y: auto; /* Allow scrolling within each section */
+    }
+
+    .main-content-section.active {
+      display: block; /* Show active section */
+      /* Special handling for hero as it uses flexbox for centering */
+    }
+
+    .hero.main-content-section.active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .hero {
+      background: url('https://placehold.co/1600x600/3a3f58/ffffff?text=Grace+in+Action') no-repeat center center/cover;
+      color: white;
+      height: 100vh; /* Use 100vh for hero to fill screen */
+      padding-top: 0; /* No padding-top needed here, handled by min-height on .main-content-section */
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay for better readability */
+      padding: 20px 30px; /* Increased padding */
+      border-radius: 10px; /* Slightly more rounded corners */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Add shadow to hero text */
+    }
+
+    section {
+      padding: 60px 40px;
+      margin-bottom: 0; /* Remove margin-bottom as sections are stacked and hidden */
+      background-color: #fff; /* Ensure sections have white background */
+      border-radius: 8px; /* Rounded corners for sections */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Soft shadow for sections */
+      max-width: 1000px; /* Max width for content within sections */
+      margin-left: auto;
+      margin-right: auto;
+      box-sizing: border-box; /* Include padding and border in element's total width and height */
+    }
+
+    section:nth-of-type(even) { /* Alternate background for sections */
+      background-color: #f0f0f0;
+    }
+
+    section h2 {
+      font-size: 2.5em;
+      color: #3a3f58;
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    section h2::after { /* Underline effect for section titles */
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background-color: #a0dfff; /* Matching hover color */
+      border-radius: 2px;
+    }
+
+    /* Form specific styles */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #3a3f58;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="number"],
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+      box-sizing: border-box; /* Ensure padding and border are included in width */
+    }
+
+    .form-group textarea {
+      resize: vertical; /* Allow vertical resizing */
+      min-height: 100px;
+    }
+
+    .form-submit-btn {
+      display: inline-block;
+      background-color: #a0dfff;
+      color: #3a3f58;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px; /* More rounded button */
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .form-submit-btn:hover {
+      background-color: #6aabf0;
+      transform: translateY(-3px);
+    }
+
+    .success-message {
+      background-color: #d4edda;
+      color: #155724;
+      padding: 15px;
+      border: 1px solid #c3e6cb;
+      border-radius: 5px;
+      margin-top: 20px;
+      text-align: center;
+      display: none; /* Hidden by default */
+    }
+
+    .error-message {
+      background-color: #f8d7da;
+      color: #721c24;
+      padding: 15px;
+      border: 1px solid #f5c6cb;
+      border-radius: 5px;
+      margin-top: 20px;
+      text-align: center;
+      display: none; /* Hidden by default */
+    }
+
+    footer {
+      background-color: #3a3f58;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    /* Back to Top Button CSS */
+    #back-to-top {
+      display: none; /* Hidden by default */
+      position: fixed; /* Fixed position */
+      bottom: 30px; /* Place at the bottom */
+      right: 30px; /* Place at the right */
+      z-index: 99; /* Higher z-index to be on top of other elements */
+      border: none; /* Remove borders */
+      outline: none; /* Remove outline */
+      background-color: #a0dfff; /* Light blue background */
+      color: #3a3f58; /* Dark text color */
+      cursor: pointer; /* Add a mouse pointer on hover */
+      padding: 15px; /* Some padding */
+      border-radius: 50%; /* Rounded button */
+      font-size: 1.5em; /* Increase font size */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add shadow */
+      transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    }
+
+    #back-to-top:hover {
+      background-color: #6aabf0; /* Darker blue on hover */
+      transform: translateY(-3px); /* Slight lift on hover */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 15px 20px;
+      }
+      nav {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      nav a {
+        margin: 5px 10px;
+      }
+      .hero h1 {
+        font-size: 2em;
+        padding: 15px;
+      }
+      /* Ensure sections still have adequate padding on small screens */
+      section {
+        padding: 30px 20px;
+      }
+      section h2 {
+        font-size: 2em;
+      }
+      #back-to-top {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px;
+        font-size: 1.2em;
+      }
+    }
+
+    /* Testimonial specific styles */
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .testimonial-card {
+      background-color: #fdfdfd;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .testimonial-card p {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 15px;
+      font-size: 1.1em;
+    }
+    .testimonial-card .author {
+      font-weight: bold;
+      color: #3a3f58;
+      font-size: 0.95em;
+    }
+
+    /* News Article specific styles */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .news-article {
+      background-color: #fdfdfd;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .news-article:hover {
+      transform: translateY(-5px);
+    }
+    .news-article img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
+    .news-article .content {
+      padding: 20px;
+    }
+    .news-article h3 {
+      font-size: 1.4em;
+      color: #3a3f58;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .news-article .date {
+      font-size: 0.85em;
+      color: #777;
+      margin-bottom: 15px;
+      display: block;
+    }
+    .news-article p {
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.5;
+    }
+    .news-article a {
+      color: #a0dfff;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    .news-article a:hover {
+      text-decoration: underline;
+    }
+
+    /* FAQ specific styles */
+    .faq-item {
+      margin-bottom: 15px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #fdfdfd;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    }
+    .faq-question {
+      background-color: #a0dfff;
+      color: #3a3f58;
+      padding: 18px 25px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+    }
+    .faq-question:hover {
+      background-color: #6aabf0;
+      color: #fff;
+    }
+    .faq-question::after {
+      content: '+';
+      font-size: 1.5em;
+      transition: transform 0.3s ease;
+    }
+    .faq-question.active::after {
+      content: '-';
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      padding: 0 25px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+      background-color: #fff;
+      color: #555;
+      line-height: 1.6;
+    }
+    .faq-answer p {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin: 0; /* Remove default paragraph margins */
+    }
+    .faq-answer.open {
+      max-height: 200px; /* Adjust as needed for content, or use JS to calculate */
+      padding: 15px 25px;
+    }
+
+    /* Sermons Grid and Card Styles */
+    .sermons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px; /* Space before Bible Resource within Sermons */
+    }
+    .sermon-card {
+      background-color: #fdfdfd;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .sermon-card:hover {
+      transform: translateY(-5px);
+    }
+    .sermon-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .sermon-card .content {
+      padding: 20px;
+    }
+    .sermon-card h3 {
+      font-size: 1.3em;
+      color: #3a3f58;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .sermon-card .speaker, .sermon-card .date {
+      font-size: 0.85em;
+      color: #777;
+      margin-bottom: 5px;
+      display: block;
+    }
+    .sermon-card .audio-player {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    /* Team Member Card Styles */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      text-align: center;
+    }
+    .team-member-card {
+      background-color: #fdfdfd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    .team-member-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #a0dfff;
+    }
+    .team-member-card h3 {
+      font-size: 1.3em;
+      color: #3a3f58;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+    .team-member-card .role {
+      font-size: 0.9em;
+      color: #777;
+      margin-bottom: 10px;
+    }
+    .team-member-card p {
+      font-size: 0.85em;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    /* Statement of Faith Styles */
+    .faith-points {
+        list-style: none;
+        padding: 0;
+        margin-top: 30px;
+        text-align: left;
+    }
+    .faith-points li {
+        background-color: #fdfdfd;
+        border: 1px solid #eee;
+        border-left: 5px solid #a0dfff;
+        border-radius: 5px;
+        padding: 15px 20px;
+        margin-bottom: 10px;
+        font-size: 1em;
+        line-height: 1.5;
+        color: #333;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+    .faith-points li strong {
+        color: #3a3f58;
+    }
+
+    /* Style for the embedded Bible resource within Sermons */
+    .sermons-bible-resource {
+      margin-top: 60px; /* Space above this section when inside Sermons */
+      padding: 40px; /* Add padding consistent with sections */
+      background-color: #fbfbfb; /* Slightly different background to differentiate */
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .sermons-bible-resource h3 { /* Targeting the h3 within this div */
+        font-size: 2em; /* Smaller than main section h2 */
+        margin-bottom: 20px;
+        color: #3a3f58;
+    }
+    .sermons-bible-resource p {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+
+    /* Responsive adjustments for new sections */
+    @media (max-width: 768px) {
+      .testimonial-card, .news-article {
+        margin-bottom: 15px;
+      }
+      .news-grid, .sermons-grid, .team-grid {
+        grid-template-columns: 1fr;
+      }
+      .sermons-bible-resource {
+        padding: 20px;
+      }
+      .sermons-bible-resource h3 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header and Navigation -->
+  <header role="banner">
+    <div class="logo">
+      <!-- Logo URL provided by user and linked to home -->
+      <a href="#home" onclick="showSection('#home'); return false;" aria-label="Go to Home section">
+        <img src="http://googleusercontent.com/file_content/13" alt="Grace Impact Logo" onerror="this.onerror=null;this.src='https://placehold.co/40x40/cccccc/333333?text=Logo'">
+      </a>
+      Grace Impact Ministries
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="#home" onclick="showSection('#home'); return false;" aria-label="Go to Home section">Home</a>
+      <a href="#about" onclick="showSection('#about'); return false;" aria-label="Learn about us">About</a>
+      <a href="#mission" onclick="showSection('#mission'); return false;" aria-label="Read our mission statement">Mission</a>
+      <a href="#events" onclick="showSection('#events'); return false;" aria-label="View upcoming events">Events</a>
+      <a href="#sermons" onclick="showSection('#sermons'); return false;" aria-label="Access past sermons and messages and Bible resources">Sermons</a> <!-- Updated link -->
+      <a href="#team" onclick="showSection('#team'); return false;" aria-label="Meet our leadership team">Team</a>
+      <a href="#faith" onclick="showSection('#faith'); return false;" aria-label="Read our statement of faith">Our Faith</a>
+      <a href="#testimonials" onclick="showSection('#testimonials'); return false;" aria-label="Read stories of transformation">Testimonials</a>
+      <a href="#news" onclick="showSection('#news'); return false;" aria-label="Read our latest news and blog posts">News</a>
+      <a href="#donation" onclick="showSection('#donation'); return false;" aria-label="Support our mission through donation">Donation</a>
+      <a href="#quotes" onclick="showSection('#quotes'); return false;" aria-label="Read inspirational quotes">Quotes</a>
+      <a href="#faq" onclick="showSection('#faq'); return false;" aria-label="Frequently asked questions">FAQ</a>
+      <a href="#contact" onclick="showSection('#contact'); return false;" aria-label="Contact us">Contact</a>
+    </nav>
+  </header>
+
+  <main> <!-- Main content wrapper -->
+    <!-- Hero Section -->
+    <div id="home" class="hero main-content-section active" role="region" aria-label="Welcome section">
+      <h1>Touching Lives Through Grace</h1>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="main-content-section" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Us</h2>
+      <p>Grace Impact Ministries is a Spirit-led, Christ-centered ministry dedicated to preaching the Word, healing the broken, reaching the youth, and empowering lives through worship, giving, and teaching.</p>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="main-content-section" aria-labelledby="mission-heading">
+      <h2 id="mission-heading">Our Mission</h2>
+      <p>Our mission is to impact generations by spreading the love and power of Jesus Christ through healing, teaching, outreach, and worship. We are committed to raising kingdom-minded believers who walk in grace and purpose.</p>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="main-content-section" aria-labelledby="events-heading">
+      <h2 id="events-heading">Upcoming Events</h2>
+      <p>Stay tuned for our healing crusades, youth revival nights, worship gatherings, and Bible study sessions.</p>
+    </section>
+
+    <!-- Sermons / Messages Archive Section -->
+    <section id="sermons" class="main-content-section" aria-labelledby="sermons-heading">
+      <h2 id="sermons-heading">Sermons & Messages</h2>
+      <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; color: #555;">Catch up on the latest messages and dive deeper into the Word.</p>
+      <div class="sermons-grid">
+        <div class="sermon-card">
+          <img src="https://placehold.co/400x180/3a3f58/ffffff?text=Sermon+1" alt="Sermon Image" loading="lazy">
+          <div class="content">
+            <h3>The Power of Grace</h3>
+            <span class="speaker">Speaker: Pastor David</span>
+            <span class="date">November 3, 2025</span>
+            <audio controls class="audio-player">
+              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+        <div class="sermon-card">
+          <img src="https://placehold.co/400x180/a0dfff/3a3f58?text=Sermon+2" alt="Sermon Image" loading="lazy">
+          <div class="content">
+            <h3>Living a Transformed Life</h3>
+            <span class="speaker">Speaker: Elder Sarah</span>
+            <span class="date">October 27, 2025</span>
+            <audio controls class="audio-player">
+              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+        <div class="sermon-card">
+          <img src="https://placehold.co/400x180/d4edda/155724?text=Sermon+3" alt="Sermon Image" loading="lazy">
+          <div class="content">
+            <h3>Faith in Action</h3>
+            <span class="speaker">Speaker: Pastor David</span>
+            <span class="date">October 20, 2025</span>
+            <audio controls class="audio-player">
+              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+
+      <!-- Online Bible Resource Section (now part of Sermons) -->
+      <div id="sermons-bible-resource" class="sermons-bible-resource" aria-labelledby="bible-resource-heading-inner">
+        <h3 id="bible-resource-heading-inner">Online Bible Resource</h3>
+        <p style="font-size: 1.1em; margin-bottom: 30px; color: #555;">Explore the Word of God directly on our website through Bible Gateway.</p>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+          <iframe src="https://www.biblegateway.com" width="100%" height="600" title="Bible Gateway" style="border:1px solid #ccc; border-radius: 8px;" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership / Team Section -->
+    <section id="team" class="main-content-section" aria-labelledby="team-heading">
+      <h2 id="team-heading">Our Leadership Team</h2>
+      <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; color: #555;">Meet the dedicated individuals guiding Grace Impact Ministries.</p>
+      <div class="team-grid">
+        <div class="team-member-card">
+          <img src="https://placehold.co/120x120/a0dfff/3a3f58?text=PD" alt="Pastor David" loading="lazy">
+          <h3>Pastor David Mark</h3>
+          <div class="role">Lead Pastor</div>
+          <p>Pastor David has a passion for teaching the Word and seeing lives transformed by God's grace.</p>
+        </div>
+        <div class="team-member-card">
+          <img src="https://placehold.co/120x120/d4edda/155724?text=ES" alt="Elder Sarah" loading="lazy">
+          <h3>Elder Sarah Johnson</h3>
+          <div class="role">Associate Pastor</div>
+          <p>Elder Sarah oversees our youth programs and is dedicated to nurturing future leaders.</p>
+        </div>
+        <div class="team-member-card">
+          <img src="https://placehold.co/120x120/e9d5ff/8b5cf6?text=LV" alt="Leader Victor" loading="lazy">
+          <h3>Victor Chen</h3>
+          <div class="role">Worship Director</div>
+          <p>Victor leads our worship team, creating an atmosphere where hearts can connect with God.</p>
+        </div>
+        <div class="team-member-card">
+          <img src="https://placehold.co/120x120/f7e0a3/3a3f58?text=LM" alt="Leader Maria" loading="lazy">
+          <h3>Maria Rodriguez</h3>
+          <div class="role">Community Outreach Coordinator</div>
+          <p>Maria organizes our community initiatives, ensuring we meet the practical needs of our neighbors.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statement of Faith / Core Beliefs Section -->
+    <section id="faith" class="main-content-section" aria-labelledby="faith-heading">
+      <h2 id="faith-heading">Our Statement of Faith</h2>
+      <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; color: #555;">We believe in fundamental truths that guide our ministry and lives.</p>
+      <ul class="faith-points">
+        <li><strong>The Holy Scriptures:</strong> We believe the Bible is the inspired, infallible, and authoritative Word of God.</li>
+        <li><strong>The One True God:</strong> We believe in one God, eternally existent in three persons: Father, Son, and Holy Spirit.</li>
+        <li><strong>The Deity of the Lord Jesus Christ:</strong> We believe in His deity, His virgin birth, His sinless life, His miracles, His vicarious and atoning death, His bodily resurrection, His ascension to the right hand of the Father, and His personal return in power and glory.</li>
+        <li><strong>The Fall of Man:</strong> We believe that humanity was created good and upright, but fell from grace through voluntary transgression.</li>
+        <li><strong>Salvation through Grace:</strong> We believe that salvation is received through repentance toward God and faith in the Lord Jesus Christ.</li>
+        <li><strong>Divine Healing:</strong> We believe in the power of divine healing, provided for through the atonement of Christ.</li>
+        <li><strong>The Resurrection of the Just and the Unjust:</strong> We believe in a bodily resurrection for both the saved and the lost.</li>
+        <li><strong>Eternal Life:</strong> We believe in the blessed hope of eternal life for believers and eternal punishment for the lost.</li>
+      </ul>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="main-content-section" aria-labelledby="testimonials-heading">
+      <h2 id="testimonials-heading">Stories of Transformation</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p>"Grace Impact Ministries helped me find my purpose and strength through faith. My life has truly been transformed!"</p>
+          <div class="author">- Jane Doe, Community Member</div>
+        </div>
+        <div class="testimonial-card">
+          <p>"The teachings and fellowship here have brought immense healing and joy into my family's life. Forever grateful."</p>
+          <div class="author">- John Smith, Volunteer</div>
+        </div>
+        <div class="testimonial-card">
+          <p>"Through their youth programs, I gained confidence and a deeper understanding of God's love. A true blessing!"</p>
+          <div class="author">- Emily White, Youth Program Participant</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section id="news" class="main-content-section" aria-labelledby="news-heading">
+      <h2 id="news-heading">Latest News & Updates</h2>
+      <div class="news-grid">
+        <article class="news-article">
+          <img src="https://placehold.co/400x200/a0dfff/3a3f58?text=Community+Event" alt="Community Outreach Event" loading="lazy">
+          <div class="content">
+            <h3>Local Food Drive Success!</h3>
+            <span class="date">October 26, 2025</span>
+            <p>Our recent food drive collected over 500 lbs of goods for local families. Thank you for your overwhelming generosity!</p>
+            <a href="#">Read More &rarr;</a>
+          </div>
+        </article>
+        <article class="news-article">
+          <img src="https://placehold.co/400x200/d4edda/155724?text=Youth+Revival" alt="Youth Revival" loading="lazy">
+          <div class="content">
+            <h3>Youth Revival Night Highlights</h3>
+            <span class="date">October 19, 2025</span>
+            <p>The youth revival night was a powerful experience, with many young lives touched and inspired. See photos and recap.</p>
+            <a href="#">Read More &rarr;</a>
+          </div>
+        </article>
+        <article class="news-article">
+          <img src="https://placehold.co/400x200/e9d5ff/8b5cf6?text=New+Series" alt="New Sermon Series" loading="lazy">
+          <div class="content">
+            <h3>New Sermon Series: "Walking in Grace"</h3>
+            <span class="date">October 12, 2025</span>
+            <p>Join us as we explore what it means to truly walk in God's abounding grace. Sundays at 10 AM.</p>
+            <a href="#">Read More &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donation" class="main-content-section" aria-labelledby="donation-heading">
+      <h2 id="donation-heading">Support Our Mission</h2>
+      <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; color: #555;">Your generosity helps us continue our mission of "Grace in action, Lives transformed." Thank you for your support!</p>
+      
+      <form id="donationForm" aria-label="Donation and Support Form">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="amount">Donation Amount (Optional)</label>
+          <input type="number" id="amount" name="amount" min="0" step="any" placeholder="e.g., 50.00">
+        </div>
+        <div class="form-group">
+          <label for="message">Message (Optional)</label>
+          <textarea id="message" name="message" placeholder="Share your thoughts or prayer requests..."></textarea>
+        </div>
+        <div style="text-align: center;">
+          <button type="submit" class="form-submit-btn">Submit Support</button>
+        </div>
+      </form>
+      <div id="successMessage" class="success-message" role="status" aria-live="polite">
+        Thank you for your submission! Your support has been recorded.
+      </div>
+      <div id="errorMessage" class="error-message" role="alert" aria-live="assertive">
+        There was an error submitting your form. Please try again.
+      </div>
+    </section>
+
+    <!-- Inspirational Quotes Section -->
+    <section id="quotes" class="main-content-section" aria-labelledby="quotes-heading">
+      <h2 id="quotes-heading">Inspirational Quotes</h2>
+      <blockquote style="text-align: center; font-size: 1.5em; margin: 20px auto; max-width: 700px; line-height: 1.6; color: #3a3f58; font-style: italic;">
+        "Man shall not live by bread alone, but by every word that proceedeth out of the mouth of God." - Matthew 4:4
+      </blockquote>
+      <q style="display: block; text-align: center; font-size: 1.2em; margin-top: 15px; color: #555;">God is our refuge and strength.</q>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="main-content-section" aria-labelledby="faq-heading">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">What is Grace Impact Ministries?</div>
+          <div class="faq-answer">
+            <p>Grace Impact Ministries is a Spirit-led, Christ-centered ministry dedicated to transforming lives through the preaching of the Word, healing, youth outreach, and empowering individuals through worship, giving, and teaching.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How can I get involved?</div>
+          <div class="faq-answer">
+            <p>There are many ways to get involved! You can attend our services and events, volunteer your time, or support our mission through donations. Please visit our 'Events' or 'Donation' sections for more details.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Do you offer programs for youth?</div>
+          <div class="faq-answer">
+            <p>Yes, we have dedicated youth empowerment programs designed to nurture the next generation through mentorship, education, and spiritual development. Check our 'Ministries' section for more information.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="main-content-section" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Us</h2>
+      <p>Email: info@graceimpact.org</p>
+      <p>Phone: +123-456-7890</p>
+      <p>Follow us on social media: Facebook | Instagram | YouTube</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 Grace Impact Ministries. All rights reserved.</p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button onclick="topFunction()" id="back-to-top" title="Go to top" aria-label="Scroll to top of page">↑</button>
+
+  <script type="module">
+    // Firebase imports for the Canvas environment
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+    // Global variables provided by the Canvas environment
+    const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+    const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
+
+    let app;
+    let db;
+    let auth;
+    let userId; // To store the authenticated user ID
+
+    // Initialize Firebase and authenticate
+    async function initFirebase() {
+        if (!app && Object.keys(firebaseConfig).length > 0) {
+            app = initializeApp(firebaseConfig);
+            db = getFirestore(app);
+            auth = getAuth(app);
+
+            try {
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await signInWithCustomToken(auth, __initial_auth_token);
+                } else {
+                    await signInAnonymously(auth);
+                }
+                userId = auth.currentUser?.uid || 'anonymous';
+                console.log('Firebase initialized and authenticated as:', userId);
+            } catch (error) {
+                console.error("Firebase authentication failed:", error);
+                // Fallback for cases where auth fails, though Firestore write operations might be restricted
+                userId = 'anonymous';
+            }
+        } else if (!app) {
+             console.error("Firebase configuration not available. Cannot initialize Firebase.");
+             userId = 'anonymous';
+        }
+    }
+
+    // Function to show a specific content section and hide others
+    function showSection(sectionId) {
+        document.querySelectorAll('.main-content-section').forEach(section => {
+            section.classList.remove('active');
+        });
+        const activeSection = document.querySelector(sectionId);
+        if (activeSection) {
+            activeSection.classList.add('active');
+            // Scroll to the top of the active section (accounting for fixed header)
+            window.scrollTo(0, activeSection.offsetTop - document.querySelector('header').offsetHeight);
+        }
+        // Hide the back-to-top button when navigating to a new section, it will reappear on scroll
+        document.getElementById("back-to-top").style.display = "none";
+    }
+
+    // Get the back-to-top button
+    let mybutton = document.getElementById("back-to-top");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      window.scrollTo({top: 0, behavior: 'smooth'}); // For Safari
+      document.documentElement.scrollTo({top: 0, behavior: 'smooth'}); // For Chrome, Firefox, IE and Opera
+    }
+
+    // Form Submission Handling for Firestore
+    document.addEventListener('DOMContentLoaded', async () => {
+        // Initialize Firebase when the DOM is ready
+        await initFirebase();
+
+        const donationForm = document.getElementById('donationForm');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        if (donationForm) {
+            donationForm.addEventListener('submit', async function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Hide previous messages
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'none';
+
+                const fullName = document.getElementById('fullName').value;
+                const email = document.getElementById('email').value;
+                const amount = document.getElementById('amount').value;
+                const message = document.getElementById('message').value;
+
+                if (!db) {
+                    console.error("Firestore is not initialized. Cannot submit form.");
+                    errorMessage.textContent = "Database not ready. Please try again.";
+                    errorMessage.style.display = 'block';
+                    return;
+                }
+
+                try {
+                    const docRef = await addDoc(collection(db, `artifacts/${appId}/public/data/donations`), {
+                        fullName: fullName,
+                        email: email,
+                        amount: amount ? parseFloat(amount) : null, // Store as number, null if empty
+                        message: message,
+                        timestamp: new Date(),
+                        userId: userId // Associate with the authenticated user (even if anonymous)
+                    });
+                    console.log("Document written with ID: ", docRef.id);
+
+                    // Show success message
+                    successMessage.textContent = "Thank you for your submission! Your support has been recorded.";
+                    successMessage.style.display = 'block';
+
+                    // Clear the form
+                    this.reset();
+
+                    // Hide the success message after a few seconds
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 5000); // Hide after 5 seconds
+
+                } catch (e) {
+                    console.error("Error adding document: ", e);
+                    errorMessage.textContent = "There was an error submitting your form. Please try again.";
+                    errorMessage.style.display = 'block';
+
+                    // Hide the error message after a few seconds
+                    setTimeout(() => {
+                        errorMessage.style.display = 'none';
+                    }, 10000); // Hide after 10 seconds
+                }
+            });
+        }
+
+        // FAQ Accordion JavaScript
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                button.classList.toggle('active');
+                answer.classList.toggle('open');
+            });
+        });
+
+        // Initialize with the home section visible
+        // Check if there's a hash in the URL and show that section, otherwise show home
+        const initialHash = window.location.hash;
+        if (initialHash && document.querySelector(initialHash)) {
+            showSection(initialHash);
+        } else {
+            showSection('#home');
+        }
+
+        // Listen for hash changes to navigate to sections (e.g., if user uses browser back/forward)
+        window.addEventListener('hashchange', () => {
+            const newHash = window.location.hash;
+            if (newHash && document.querySelector(newHash)) {
+                showSection(newHash);
+            } else {
+                showSection('#home');
+            }
+        });
+    });
+  </script>
+
+</body>
+</html>
